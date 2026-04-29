@@ -54,12 +54,12 @@ function renderCard(e) {
             ${e.web ? `<a class="card-link-btn" href="${e.web}" target="_blank"
                onclick="event.stopPropagation()" title="Web">🌐</a>` : ''}
           </div>
-          <span class="card-plan">${plan.text}</span>
+          
         </div>
       </div>
     </div>`;
 }
-
+//<span class="card-plan">${plan.text}</span>
 // ---------- FILTROS Y BÚSQUEDA ----------
 function getFiltered() {
   let list = [...EMPRENDIMIENTOS].sort((a, b) => PLAN_ORDER[a.plan] - PLAN_ORDER[b.plan]);
@@ -240,3 +240,5 @@ document.addEventListener('keydown', e => {
 // ---------- INIT ----------
 renderGrid();
 setTimeout(() => animateCount(document.getElementById('stat-total'), EMPRENDIMIENTOS.length), 600);
+const cats = [...new Set(EMPRENDIMIENTOS.map(e => e.rubro))];
+document.getElementById('stat-cats').textContent = cats.length;

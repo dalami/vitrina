@@ -190,7 +190,7 @@ const EMPRENDIMIENTOS = [
     tagline: "Masajes relajantes y descontracturantes.",
     desc: "Mas vale prevenir que curar",
     ubicacion: "Pinamar", // o null si no querés mostrar
-    envios: null,
+    envios: false,
     whatsapp: "549225461626", // código de país + número, sin + ni espacios
     instagram: "keepcalmassage", // solo el usuario, sin @
     email: null, // o null
@@ -222,9 +222,9 @@ const EMPRENDIMIENTOS = [
     ],
   },
 
-   {
+  {
     id: 11,
-    nombre: "La Dueña Moda",
+    nombre: "La Duena Moda",
     rubro: "Moda", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
     tagline: "Somos fabricantes y mayoristas de indumentaria femenina",
     desc: "Vendemos por internet",
@@ -242,5 +242,84 @@ const EMPRENDIMIENTOS = [
     ],
   },
 
+  {
+    id: 12,
+    nombre: "Keramike Artesanias",
+    rubro: "Regalos", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
+    tagline: "Bienvenidos a Keramike artesanias",
+    desc: "Pintura en porcelana, tablas de madera, cuchillos, cesteria y mucho más.",
+    ubicacion: "Pinamar", // o null si no querés mostrar
+    envios: true,
+    whatsapp: "5492254111111", // código de país + número, sin + ni espacios
+    instagram: "keramike.carilo", // solo el usuario, sin @
+    email: null, // o null
+    web: null, // o null
+    plan: "basic",
+    images: [
+      // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
+      "img/keramike/keramike1.jpeg",
+      // ejemplo de foto propia en carpeta /img/
+    ],
+  },
+
+  {
+    id: 13,
+    nombre: "Accesorios Pilar",
+    rubro: "Accesorios", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
+    tagline: "Bienvenidos a Accesorios Pilar",
+    desc: "Busca tu estilo.",
+    ubicacion: "Pinamar", // o null si no querés mostrar
+    envios: true,
+    whatsapp: "5492254111111", // código de país + número, sin + ni espacios
+    instagram: "accesorios.pilar24", // solo el usuario, sin @
+    email: null, // o null
+    web: null, // o null
+    plan: "basic",
+    images: [
+      // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
+      "img/accesoriosPilar/AccesorioPilar1.jpeg",
+      // ejemplo de foto propia en carpeta /img/
+    ],
+  },
+
+   {
+    id: 14,
+    nombre: "Blume Blume",
+    rubro: "Velas", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
+    tagline: "Hecho a mano con amor",
+    desc: "Velas - Difusores - Home Spray.",
+    ubicacion: "Pinamar", // o null si no querés mostrar
+    envios: true,
+    whatsapp: "5492254111111", // código de país + número, sin + ni espacios
+    instagram: "blumebyflor", // solo el usuario, sin @
+    email: null, // o null
+    web: null, // o null
+    plan: "basic",
+    images: [
+      // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
+      "img/blume/blume1.jpeg",
+      // ejemplo de foto propia en carpeta /img/
+    ],
+  },
+
+  {
+    id: 15,
+    nombre: "Vuela Alondra",
+    rubro: "Accesorios", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
+    tagline: "Gargantillas, pulseras , tobilleras , aros , vinchas",
+    desc: "Accesorios.",
+    ubicacion: "Pinamar", // o null si no querés mostrar
+    envios: true,
+    whatsapp: "5492254111111", // código de país + número, sin + ni espacios
+    instagram: "vuela.alondra", // solo el usuario, sin @
+    email: null, // o null
+    web: null, // o null
+    plan: "basic",
+    images: [
+      // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
+      "img/vuelaalondra/vuelaalondra1.jpeg",
+      // ejemplo de foto propia en carpeta /img/
+    ],
+  },
   // Seguí agregando acá ↓ (copiá el bloque de ejemplo de arriba)
 ];

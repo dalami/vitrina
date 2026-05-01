@@ -321,5 +321,65 @@ const EMPRENDIMIENTOS = [
       // ejemplo de foto propia en carpeta /img/
     ],
   },
+
+   {
+    id: 16,
+    nombre: "Pinamar Suplementos",
+    rubro: "Suplementos", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
+    tagline: "Tus suplementos al mejor precio del mercado",
+    desc: "Entrega a domicilio.",
+    ubicacion: "Pinamar", // o null si no querés mostrar
+    envios: true,
+    whatsapp: "5492254111111", // código de país + número, sin + ni espacios
+    instagram: "pinamarsuplementos", // solo el usuario, sin @
+    email: null, // o null
+    web: null, // o null
+    plan: "basic",
+    images: [
+      // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
+      "img/pinamarsuplemen/pinamarsuple1.jpeg",
+      // ejemplo de foto propia en carpeta /img/
+    ],
+  },
+
+   {
+    id: 17,
+    nombre: "Caju Bolsas Plasticas",
+    rubro: "Bolsas", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
+    tagline: "Fabrica de bolsas de polietileno",
+    desc: "Venta Mayorista - Minorista.",
+    ubicacion: "Caseros, Buenos Aires", // o null si no querés mostrar
+    envios: true,
+    whatsapp: "5492254111111", // código de país + número, sin + ni espacios
+    instagram: "cajubolsasplasticas", // solo el usuario, sin @
+    email: null, // o null
+    web: null, // o null
+    plan: "basic",
+    images: [
+      // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
+      "img/cajubolsas/cajubolsas1.jpeg",
+      // ejemplo de foto propia en carpeta /img/
+    ],
+  },
+
+   {
+    id: 18,
+    nombre: "Calma Aromas y Sabores",
+    rubro: "Velas", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
+    tagline: "Calma Aromas, Sabores y mas",
+    desc: "Tienda de Bienestar para tu hogar, Sahumerios * Velas * Infusiones * Regalos.",
+    ubicacion: "Tucumán", // o null si no querés mostrar
+    envios: true,
+    whatsapp: "5492254111111", // código de país + número, sin + ni espacios
+    instagram: "calmaaromasysabores", // solo el usuario, sin @
+    email: null, // o null
+    web: null, // o null
+    plan: "basic",
+    images: [
+      // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
+      "img/calmaaromasysabores/calmaaromas1.jpeg",
+      // ejemplo de foto propia en carpeta /img/
+    ],
+  },
   // Seguí agregando acá ↓ (copiá el bloque de ejemplo de arriba)
 ];

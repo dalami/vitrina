@@ -17,6 +17,8 @@ let currentFilter = "all";
 let currentSearch = "";
 let carouselIndex = 0;
 let currentImages = [];
+const ITEMS_POR_PAGINA = 12;
+let itemsVisibles = 12;
 
 // ---------- SEO DINÁMICO ----------
 function setSEO({ title, desc, image, url }) {
@@ -227,20 +229,70 @@ function renderGrid() {
   const grid = document.getElementById("grid");
   const noRes = document.getElementById("no-results");
   const filtered = getFiltered();
+
   if (filtered.length === 0) {
     grid.innerHTML = "";
     noRes.classList.add("visible");
-  } else {
-    noRes.classList.remove("visible");
-    grid.innerHTML = filtered.map(renderCard).join("");
-    document.getElementById("grid-count").textContent =
-      `${filtered.length} emprendimiento${filtered.length !== 1 ? "s" : ""}`;
-    observeFadeUp();
+    renderBotonCargarMas(0, 0);
+    return;
   }
+
+  noRes.classList.remove("visible");
+  const visibles = filtered.slice(0, itemsVisibles);
+  grid.innerHTML = visibles.map(renderCard).join("");
+  document.getElementById("grid-count").textContent =
+    `${visibles.length} de ${filtered.length} emprendimiento${filtered.length !== 1 ? "s" : ""}`;
+  observeFadeUp();
+  renderBotonCargarMas(visibles.length, filtered.length);
   document.getElementById("stat-total").textContent = EMPRENDIMIENTOS.length;
 }
 
+function renderBotonCargarMas(visibles, total) {
+  // Eliminar botón anterior si existe
+  document.getElementById("btn-cargar-mas")?.remove();
+  if (visibles >= total) return;
+
+  const resta = Math.min(ITEMS_POR_PAGINA, total - visibles);
+  const wrap = document.createElement("div");
+  wrap.id = "btn-cargar-mas";
+  wrap.style.cssText = "text-align:center;margin-top:40px;";
+  wrap.innerHTML = `
+    <button onclick="cargarMas()" style="
+      background:transparent;
+      border:1.5px solid rgba(26,24,20,0.25);
+      border-radius:100px;
+      padding:13px 36px;
+      font-family:'Syne',sans-serif;
+      font-size:14px;
+      font-weight:700;
+      color:#7A756A;
+      cursor:pointer;
+      transition:all 0.2s;
+    "
+    onmouseover="this.style.background='#1A1814';this.style.color='#fff';this.style.borderColor='#1A1814'"
+    onmouseout="this.style.background='transparent';this.style.color='#7A756A';this.style.borderColor='rgba(26,24,20,0.25)'">
+      Ver ${resta} más ↓
+    </button>
+    <p style="font-size:12px;color:#7A756A;margin-top:12px;">
+      Mostrando ${visibles} de ${total}
+    </p>
+  `;
+  document.getElementById("grid").after(wrap);
+}
+
+function cargarMas() {
+  itemsVisibles += ITEMS_POR_PAGINA;
+  renderGrid();
+  // Scroll suave al primer card nuevo
+  const cards = document.querySelectorAll(".card");
+  const primerNuevo = cards[itemsVisibles - ITEMS_POR_PAGINA];
+  if (primerNuevo) {
+    primerNuevo.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+
 function filterCat(el) {
+  itemsVisibles = ITEMS_POR_PAGINA;
   currentFilter = el.dataset.cat;
   document
     .querySelectorAll(".category-pill")
@@ -250,6 +302,7 @@ function filterCat(el) {
 }
 
 function doSearch() {
+  itemsVisibles = ITEMS_POR_PAGINA;
   currentSearch = document.getElementById("search-input").value.trim();
   renderGrid();
 }

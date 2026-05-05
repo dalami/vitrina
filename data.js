@@ -51,7 +51,7 @@ const EMPRENDIMIENTOS = [
     tagline: "Sous vide premium. Bondiola, osobuco y delicias al Malbec.",
     desc: "Emprendimiento gastronómico de alto nivel ubicado en Pinamar. Especialistas en cocción sous vide con cortes premium como bondiola desmechada y osobuco al Malbec. Perfecto para reuniones y eventos.",
     ubicacion: "Pinamar, Buenos Aires",
-    envios: true,
+    envios: false,
     whatsapp: "5492254414211",
     instagram: "dondiegopinamar",
     email: "diegoalami@gmail.com",
@@ -195,7 +195,7 @@ const EMPRENDIMIENTOS = [
     instagram: "keepcalmassage", // solo el usuario, sin @
     email: null, // o null
     web: null, // o null
-    plan: "basic",
+    plan: "featured",
     images: [
       // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
       "img/keepcalm/kc1.jpeg",
@@ -234,7 +234,7 @@ const EMPRENDIMIENTOS = [
     instagram: "la_dueña_moda", // solo el usuario, sin @
     email: null, // o null
     web: null, // o null
-    plan: "basic",
+    plan: "featured",
     images: [
       // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
       "img/laduena/laduena.jpeg",
@@ -282,7 +282,7 @@ const EMPRENDIMIENTOS = [
     ],
   },
 
-   {
+  {
     id: 14,
     nombre: "Blume Blume",
     rubro: "Velas", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
@@ -322,7 +322,7 @@ const EMPRENDIMIENTOS = [
     ],
   },
 
-   {
+  {
     id: 16,
     nombre: "Pinamar Suplementos",
     rubro: "Suplementos", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
@@ -342,7 +342,7 @@ const EMPRENDIMIENTOS = [
     ],
   },
 
-   {
+  {
     id: 17,
     nombre: "Caju Bolsas Plasticas",
     rubro: "Bolsas", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
@@ -362,7 +362,7 @@ const EMPRENDIMIENTOS = [
     ],
   },
 
-   {
+  {
     id: 18,
     nombre: "Calma Aromas y Sabores",
     rubro: "Velas", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
@@ -378,6 +378,25 @@ const EMPRENDIMIENTOS = [
     images: [
       // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
       "img/calmaaromasysabores/calmaaromas1.jpeg",
+      // ejemplo de foto propia en carpeta /img/
+    ],
+  },
+  {
+    id: 19,
+    nombre: "Marisa Modón",
+    rubro: "Aromas", // Gastronomía | Deco | Regalos | Moda | Servicios | Belleza | Eventos | Digital
+    tagline: "Mayorista y Distribuidora oficial",
+    desc: "Aromas y Fragancias. Hogar y Bienestar",
+    ubicacion: "San Rafael", // o null si no querés mostrar
+    envios: true,
+    whatsapp: "5492254111111", // código de país + número, sin + ni espacios
+    instagram: "sandra_marzzan_sr", // solo el usuario, sin @
+    email: null, // o null
+    web: null, // o null
+    plan: "featured",
+    images: [
+      // Hasta 5 imágenes. Orden sugerido: Producto, Lifestyle, Branding, Packaging, Promo
+      "img/sandramarzzan/sandramarzan1.jpeg",
       // ejemplo de foto propia en carpeta /img/
     ],
   },
